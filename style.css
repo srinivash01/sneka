@@ -715,3 +715,13 @@ nav{
 }
 
 }
+
+nav a.active{
+    color:#2563eb;
+    font-weight:700;
+}
+
+#topBtn{
+    opacity:0;
+    pointer-events:none;
+}
