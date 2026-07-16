@@ -335,3 +335,383 @@ background:linear-gradient(90deg,#2563eb,#facc15);
 border-radius:50px;
 
 }
+
+/*==============================
+ABOUT SECTION
+==============================*/
+
+.about-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    max-width:420px;
+    border-radius:25px;
+    box-shadow:0 20px 40px rgba(37,99,235,.18);
+    transition:.4s;
+}
+
+.about-image img:hover{
+    transform:scale(1.05) rotate(-2deg);
+}
+
+.about-content h3{
+    font-size:34px;
+    margin-bottom:20px;
+    color:var(--primary);
+}
+
+.about-content p{
+    line-height:1.9;
+    color:var(--gray);
+    margin-bottom:30px;
+}
+
+.about-box{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.about-box div{
+    background:rgba(255,255,255,.8);
+    backdrop-filter:blur(20px);
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.about-box div:hover{
+    transform:translateY(-12px);
+}
+
+.about-box h4{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+/*==============================
+SKILLS
+==============================*/
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.skill-card{
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(18px);
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    transition:.4s;
+    box-shadow:var(--shadow);
+}
+
+.skill-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(37,99,235,.18);
+}
+
+.skill-card i{
+    font-size:55px;
+    color:var(--primary);
+    margin-bottom:18px;
+    transition:.4s;
+}
+
+.skill-card:hover i{
+    transform:rotate(10deg) scale(1.15);
+    color:var(--secondary);
+}
+
+.skill-card h3{
+    font-size:22px;
+}
+
+/*==============================
+TIMELINE
+==============================*/
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:25px;
+    top:0;
+    width:4px;
+    height:100%;
+    background:linear-gradient(var(--primary),var(--secondary));
+}
+
+.timeline-item{
+    position:relative;
+    margin-left:70px;
+    margin-bottom:35px;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.timeline-item:hover{
+    transform:translateX(12px);
+}
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    left:-57px;
+    top:35px;
+    width:22px;
+    height:22px;
+    background:var(--secondary);
+    border:5px solid white;
+    border-radius:50%;
+}
+
+.timeline-item h3{
+    color:var(--primary);
+    margin-bottom:8px;
+}
+
+.timeline-item h4{
+    color:var(--gray);
+    margin-bottom:15px;
+}
+
+/*==============================
+PROJECTS
+==============================*/
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.project-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+}
+
+.project-card img{
+    width:100%;
+    display:block;
+    transition:.6s;
+}
+
+.project-card:hover img{
+    transform:scale(1.12);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(rgba(37,99,235,.15),rgba(0,0,0,.75));
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition:.5s;
+}
+
+.project-card:hover .overlay{
+    opacity:1;
+}
+
+.overlay h3{
+    color:#fff;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.overlay a{
+    text-decoration:none;
+    background:#fff;
+    color:var(--primary);
+    padding:12px 25px;
+    border-radius:40px;
+    font-weight:600;
+}
+
+/*==============================
+CERTIFICATES
+==============================*/
+
+.certificate-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.certificate-card{
+    background:#fff;
+    border-radius:25px;
+    text-align:center;
+    padding:40px;
+    box-shadow:var(--shadow);
+    transition:.4s;
+}
+
+.certificate-card:hover{
+    transform:translateY(-10px);
+}
+
+.certificate-card h3{
+    margin-bottom:20px;
+}
+
+.certificate-card a{
+    display:inline-block;
+    padding:12px 25px;
+    border-radius:40px;
+    background:linear-gradient(90deg,#2563eb,#06b6d4);
+    color:#fff;
+    text-decoration:none;
+}
+
+/*==============================
+CONTACT
+==============================*/
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-box input,
+.contact-box textarea{
+    padding:18px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    background:#fff;
+    box-shadow:var(--shadow);
+    font-size:16px;
+}
+
+.contact-box textarea{
+    height:180px;
+    resize:none;
+}
+
+.contact-box button{
+    border:none;
+    padding:18px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:600;
+    background:linear-gradient(90deg,#2563eb,#06b6d4);
+    color:#fff;
+    transition:.4s;
+}
+
+.contact-box button:hover{
+    transform:translateY(-5px);
+}
+
+/*==============================
+FOOTER
+==============================*/
+
+footer{
+    background:#0f172a;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+footer h2{
+    margin-bottom:10px;
+}
+
+/*==============================
+SCROLL TOP
+==============================*/
+
+#topBtn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    box-shadow:0 15px 35px rgba(37,99,235,.3);
+    transition:.4s;
+}
+
+#topBtn:hover{
+    transform:translateY(-8px) rotate(360deg);
+}
+
+/*==============================
+RESPONSIVE
+==============================*/
+
+@media(max-width:991px){
+
+.hero,
+.about-container{
+    grid-template-columns:1fr;
+    display:grid;
+    text-align:center;
+}
+
+.hero{
+    gap:50px;
+}
+
+.profile-circle{
+    width:320px;
+    height:320px;
+}
+
+.about-box{
+    grid-template-columns:1fr;
+}
+
+nav{
+    display:none;
+}
+
+.menu{
+    display:block;
+}
+
+.hero-left h1{
+    font-size:52px;
+}
+
+.section-title h2{
+    font-size:35px;
+}
+
+}
