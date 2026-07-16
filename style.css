@@ -1,1 +1,337 @@
+/*==============================
+Google Font
+==============================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+    --primary:#2563eb;
+    --secondary:#facc15;
+    --bg:#f8fafc;
+    --white:#ffffff;
+    --text:#1e293b;
+    --gray:#64748b;
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+    --radius:20px;
+}
+
+body{
+    background:linear-gradient(135deg,#f8fbff,#eef6ff,#fffdf5);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+/*==============================
+Scrollbar
+==============================*/
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(var(--primary),var(--secondary));
+    border-radius:20px;
+}
+
+/*==============================
+Loader
+==============================*/
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+}
+
+.spinner{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:6px solid #ddd;
+    border-top:6px solid var(--primary);
+    animation:spin 1s linear infinite;
+}
+
+.loader h2{
+    margin-top:20px;
+    color:var(--primary);
+    font-size:35px;
+    font-weight:700;
+}
+
+@keyframes spin{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+/*==============================
+Header
+==============================*/
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,.75);
+backdrop-filter:blur(20px);
+z-index:999;
+transition:.4s;
+
+}
+
+.logo{
+
+font-size:32px;
+font-weight:700;
+color:var(--text);
+
+}
+
+.logo span{
+
+color:var(--primary);
+
+}
+
+nav{
+
+display:flex;
+gap:35px;
+
+}
+
+nav a{
+
+text-decoration:none;
+font-weight:500;
+color:var(--text);
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:var(--primary);
+
+}
+
+.menu{
+
+display:none;
+font-size:30px;
+cursor:pointer;
+
+}
+
+/*==============================
+Hero
+==============================*/
+
+.hero{
+
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:120px 8%;
+
+}
+
+.hero-left{
+
+max-width:600px;
+
+}
+
+.hero-left h4{
+
+font-size:24px;
+color:var(--gray);
+
+}
+
+.hero-left h1{
+
+font-size:70px;
+font-weight:800;
+margin:10px 0;
+background:linear-gradient(90deg,#2563eb,#06b6d4);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.hero-left h2{
+
+font-size:34px;
+margin-bottom:20px;
+color:var(--secondary);
+
+}
+
+.hero-left p{
+
+font-size:17px;
+line-height:1.8;
+color:var(--gray);
+
+}
+
+.hero-btn{
+
+margin-top:40px;
+display:flex;
+gap:20px;
+
+}
+
+.btn{
+
+padding:15px 35px;
+background:linear-gradient(135deg,#2563eb,#3b82f6);
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.4s;
+box-shadow:0 10px 30px rgba(37,99,235,.35);
+
+}
+
+.btn:hover{
+
+transform:translateY(-8px);
+
+}
+
+.btn2{
+
+padding:15px 35px;
+background:#fff;
+border:2px solid var(--primary);
+color:var(--primary);
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.4s;
+
+}
+
+.btn2:hover{
+
+background:var(--primary);
+color:#fff;
+
+}
+
+/*==============================
+Profile
+==============================*/
+
+.hero-right{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+}
+
+.profile-circle{
+
+width:420px;
+height:420px;
+border-radius:50%;
+padding:12px;
+background:linear-gradient(135deg,#2563eb,#06b6d4,#facc15);
+animation:float 4s ease-in-out infinite;
+box-shadow:0 20px 50px rgba(37,99,235,.25);
+
+}
+
+.profile-circle img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+border:10px solid white;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+/*==============================
+Section
+==============================*/
+
+section{
+
+padding:100px 8%;
+
+}
+
+.section-title{
+
+text-align:center;
+margin-bottom:70px;
+
+}
+
+.section-title h2{
+
+font-size:45px;
+font-weight:700;
+position:relative;
+display:inline-block;
+
+}
+
+.section-title h2::after{
+
+content:'';
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+bottom:-12px;
+width:70px;
+height:5px;
+background:linear-gradient(90deg,#2563eb,#facc15);
+border-radius:50px;
+
+}
